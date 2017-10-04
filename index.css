@@ -1,0 +1,59 @@
+*
+{
+	box-sizing: border-box;
+}
+
+body
+{
+	font: normal 14px Helvetica, sans-serif;
+	padding: 10px 20px;
+}
+
+img
+{
+	max-width: 100%;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+a:visited
+{
+	color: inherit;
+}
+
+/* Navigation */
+
+nav
+{
+	display: flex;
+	background: #2578CF;
+	color: white;
+	padding: 5px;
+}
+
+.nav-logo
+{
+	margin-right: auto;
+}
+
+.nav-items
+{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.nav-items > a
+{
+	padding: 10px 15px;
+	transition: all 0.2s;
+}
+
+.nav-items > a:hover
+{
+	background: #F2F2F2;
+	color: #424242;
+	cursor: pointer;
+}
