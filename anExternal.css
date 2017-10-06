@@ -1,0 +1,71 @@
+body
+{
+	background: #171717;
+	color: white;
+}
+
+.lorem1
+{
+	font: bold 14px Helvetica, sans-serif;
+}
+
+.lorem2
+{
+	border: 3px dotted gray;
+	font: italic 12px 'Comic Sans MS', sans-serif;
+	padding: 20px;
+}
+
+.lorem3
+{
+	border: 2px solid #2578CF;
+	border-radius: 6px;
+	padding: 5px;
+}
+
+.float-container
+{
+	background: #424242;
+	padding-bottom: 30px;
+	margin-bottom: 40px;
+}
+
+.float-right
+{
+	float: right;
+	background: red;
+}
+
+.resized-image
+{
+	border: 2px solid purple;
+	width: 50px;
+	height: 50px;
+}
+
+.margin-image
+{
+	margin: 20px;
+}
+
+.image-container
+{
+	position: relative;
+	background: gray;
+	width: 300px;
+	padding: 10px;
+}
+
+.image-container > div
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 18px;
+	color: white;
+}
