@@ -4,7 +4,7 @@
 	<head>
 		<title>Job Application</title>
 
-		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
 		<link rel="stylesheet" href="jobApplication.css" />
 
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
@@ -13,21 +13,21 @@
 
 	<body>
 		<div class="title">
-			<h1>Job Application</h1> <a href="http://anguterman.com" target="_blank">by Andrew Guterman</a>
+			<h1>Fireman Job Application</h1> <a href="http://anguterman.com" target="_blank">by Andrew Guterman</a>
 		</div>
 
-		<form id="form" action="http://gclass.alexburner.com/formtest.php" method="POST">
-			<section>
-				<h2>Personal Information</h2>
+		<form id="form" action="http://gclass.alexburner.com/formtest.php" method="POST" enctype="multipart/form-data">
+			<main>
+				<h2 id="sectionTitle">Personal Information</h2>
 
-				<fieldset>
+				<fieldset id="fieldset"></fieldset>
 
-				</fieldset>
-			</section>
+				<div class="buttonContainer">
+					<button type="button" id="formNext"></button>
+				</div>
+			</main>
 
-			<nav>
-				test
-			</nav>
+			<nav id="navigation"></nav>
 		</form>
 	</body>
 </html>

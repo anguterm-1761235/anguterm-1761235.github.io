@@ -3,6 +3,11 @@
 	box-sizing: border-box;
 }
 
+*:focus
+{
+	outline: none;
+}
+
 body
 {
 	display: flex;
@@ -10,7 +15,7 @@ body
 	background: #F3F3F3;
 	font: normal 14px "Roboto", Helvetica, sans-serif;
 	color: gray;
-	height: 100vh;
+	min-height: 100vh;
 	padding: 10px;
 	margin: 0;
 }
@@ -21,15 +26,24 @@ h1, h2, h3, h4, h5, h6
 	margin: 0;
 }
 
+.title
+{
+	position: fixed;
+	top: 0;
+	right: 0;
+	text-align: center;
+	padding: 10px;
+}
+
 .title h1
 {
-	display: inline-block;
 	border: 1px solid lightgray;
 	font-size: 16px;
 	text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
 	text-transform: lowercase;
 	color: gray;
 	padding: 10px;
+	margin-bottom: 10px;
 	margin-right: 5px;
 }
 
@@ -42,32 +56,183 @@ form
 {
 	display: flex;
 	flex-flow: row;
-	background: #F3F3F3;
 	width: 60vw;
-	height: 60vh;
+	min-height: 60vh;
 	margin: auto;
+	box-shadow: 2px 2px 53px 1px rgba(0, 0, 0, 0.08);
 }
 
 fieldset
 {
 	border: none;
+	padding: 0;
+	margin: 0;
 }
 
-section
+main
 {
 	flex: 4;
-	background: white;
-	padding: 25px 40px;
+	background: #FAFAFA;
+	padding: 40px 60px;
 }
 
-section h2
+main h2
 {
 	color: #424224;
 	margin-bottom: 30px;
 }
 
-/* Sidebar */
-nav
+.cols
+{
+	display: flex;
+}
+
+.field
 {
 	flex: 1;
+
+	margin-bottom: 20px;
+}
+
+.field:not(:last-child)
+{
+	margin-right: 40px;
+}
+
+.radioContainer
+{
+	display: inline-block;
+}
+
+.radioContainer:not(:last-child)
+{
+	margin-right: 30px;
+}
+
+.radioContainer label
+{
+	font-weight: normal;
+}
+
+input, textarea, select, button
+{
+	font: inherit;
+}
+
+label
+{
+	display: block;
+	font-weight: 500;
+	font-size: 14px;
+	color: #878787;
+	padding-left: 14px;
+	margin-bottom: 10px;
+}
+
+input, textarea, select
+{
+	border-radius: 4px;
+	border: 2px solid #EBEBEB;
+	background: transparent;
+	color: #424242;
+	width: 100%;
+	padding: 12px 15px;
+	transition: all 0.5s ease;
+}
+
+input:focus, textarea:focus, select:focus
+{
+	border-color: lightgray;
+}
+
+textarea
+{
+	height: 150px;
+	resize: vertical;
+}
+
+select
+{
+	padding: 11px 14px;
+}
+
+button
+{
+	border: none;
+	border-radius: 4px;
+	background: #43A6DF;
+	font-size: 16px;
+	color: white;
+	padding: 11px 40px;
+	text-shadow: 1px 1px rgba(255, 255, 255, 0.2);
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.35);
+	transition: all 0.3s ease;
+}
+
+button:hover
+{
+	background: #2578CF;
+}
+
+button:active
+{
+	box-shadow: none;
+}
+
+.buttonContainer
+{
+	text-align: right;
+
+	padding-top: 15px;
+}
+
+/* Sidebar */
+#navigation
+{
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	flex: 2;
+	background: white;
+	padding: 20px 0;
+	box-shadow: -10px 0 20px -5px rgba(0, 0, 0, 0.1);
+}
+
+#navigation > div
+{
+	text-align: center;
+	margin: auto;
+	transition: color 0.3s;
+}
+
+#navigation > div:not(:last-child)
+{
+	margin-bottom: 20px;
+}
+
+#navigation .num
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid gray;
+	border-radius: 100%;
+	font-size: 24px;
+	width: 48px;
+	height: 48px;
+	margin: auto;
+	margin-bottom: 10px;
+	transition: all 0.3s;
+}
+
+#navigation > div.current
+{
+	color: #43A6DF;
+}
+
+#navigation > div.current .num
+{
+	border-color: #43A6DF;
+	background: #43A6DF;
+	color: white;
 }
