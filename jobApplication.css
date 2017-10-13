@@ -1,0 +1,73 @@
+*
+{
+	box-sizing: border-box;
+}
+
+body
+{
+	display: flex;
+	flex-flow: column;
+	background: #F3F3F3;
+	font: normal 14px "Roboto", Helvetica, sans-serif;
+	color: gray;
+	height: 100vh;
+	padding: 10px;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	font-weight: normal;
+	margin: 0;
+}
+
+.title h1
+{
+	display: inline-block;
+	border: 1px solid lightgray;
+	font-size: 16px;
+	text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
+	text-transform: lowercase;
+	color: gray;
+	padding: 10px;
+	margin-right: 5px;
+}
+
+.title a, .title a:visited
+{
+	color: inherit;
+}
+
+form
+{
+	display: flex;
+	flex-flow: row;
+	background: #F3F3F3;
+	width: 60vw;
+	height: 60vh;
+	margin: auto;
+}
+
+fieldset
+{
+	border: none;
+}
+
+section
+{
+	flex: 4;
+	background: white;
+	padding: 25px 40px;
+}
+
+section h2
+{
+	color: #424224;
+	margin-bottom: 30px;
+}
+
+/* Sidebar */
+nav
+{
+	flex: 1;
+}
